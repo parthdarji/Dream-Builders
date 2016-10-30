@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.visitorVO" table="visitor_mst">
+
+		<id name="visitor_id" type="int" column="Visitor_Id">
+			<generator class="increment" />
+		</id>
+
+		<property name="firstname" >
+			<column name="FirstName" />
+		</property>
+		<property name="lastname" >
+			<column name="LastName" />
+		</property>
+		<property name="country" >
+			<column name="Country" />
+		</property>
+		<property name="state" >
+			<column name="State" />
+		</property>
+		<property name="city" >
+			<column name="City" />
+		</property>
+		<property name="email" >
+			<column name="Email" />
+		</property>
+		<property name="contact" >
+			<column name="Contact" />
+		</property>
+		
+
+	</class>
+
+</hibernate-mapping>

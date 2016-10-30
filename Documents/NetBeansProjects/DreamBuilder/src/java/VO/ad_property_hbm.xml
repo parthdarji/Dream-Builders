@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="VO.propertyVO" table="ad_property_dtl"  >
+  
+   <id name="propertyId" type="int" column="Property_ID" >
+		<generator class="increment"/> 
+   </id>
+   
+   <property name="propertyName"><column name="property_name" /></property>
+   <property name="propertyDesc"><column name="property_Description" /></property>
+   
+   
+   <many-to-one name="categoryId" column="Category_Id" class="VO.categoryVO"  />   
+   <many-to-one name="subcategoryId" column="SubCategory_Id" class="VO.subcategoryVO"  />    		     
+	<many-to-one name="countryId" column="Country_Id" class="VO.countryVO"  />  			     
+	<many-to-one name="stateId" column="State_Id" class="VO.stateVO"  />  	
+  <many-to-one name="cityId" column="City_Id" class="VO.cityVO"  />  
+   
+   <property name="area"><column name="Area" /></property>
+   <property name="price"><column name="price" /></property>
+   <property name="type"><column name="type" /></property>
+ 	<property name="longitude"><column name="longitude" /></property>
+ 	<property name="lattitude"><column name="lattitude" /></property>
+ 	<property name="status"><column name="Status" /></property>
+ 	<property name="bid"><column name="Bid" /></property>
+ </class>
+</hibernate-mapping>

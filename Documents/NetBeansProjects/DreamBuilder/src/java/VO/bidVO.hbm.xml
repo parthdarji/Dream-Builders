@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+
+<hibernate-mapping>
+	<class name="VO.bidVO" table="Bid_dtl">
+
+		<id name="bidId" type="int" column="bid_Id">
+			<generator class="increment" />
+		</id>
+
+		<property name="bidprice" >
+			<column name="Bidprice" />
+		</property>
+
+		<property name="baseprice">
+			<column name="Baseprice"/>
+		</property>
+
+		 <many-to-one name="propertyId" column="PropertyId" class="VO.propertyVO"  />   
+
+		 <many-to-one name="loginId" column="loginId" class="VO.loginVO"  />		
+	</class>
+
+</hibernate-mapping>

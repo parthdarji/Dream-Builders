@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+  <property name="hibernate.connection.driver_class"> com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost/dream_builders</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.connection.password">parth</property>
+  <property name="hibernate.connection.pool_size">20</property>
+  <property name="show_sql">true</property>
+  <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <!-- Mapping files -->
+  
+  <mapping resource="VO/ad_country_dtl.hbm.xml"/>
+ <mapping resource="VO/ad_state_dtl.hbm.xml"/>
+ <mapping resource="VO/ad_city_dtl.hbm.xml"/>
+ <mapping resource="VO/ad_category_dtl.hbm.xml"/>
+ <mapping resource="VO/ad_subcategory_dtl.hbm.xml"/>
+ <mapping resource="VO/ad_property_hbm.xml"/>
+ <mapping resource="VO/ad_property_mapping.hbm.xml"/>
+ <mapping resource="VO/visitorVO.hbm.xml"/>
+ <mapping resource="VO/registration.hbm.xml"/>
+ <mapping resource="VO/sliderVO.hbm.xml"/>
+<mapping resource="VO/loginVO.hbm.xml"/>
+<mapping resource="VO/feedbackVO.hbm.xml"/>
+<mapping resource="VO/complainVO.hbm.xml"/>
+<mapping resource="VO/bidVO.hbm.xml"/>
+
+</session-factory>
+</hibernate-configuration>

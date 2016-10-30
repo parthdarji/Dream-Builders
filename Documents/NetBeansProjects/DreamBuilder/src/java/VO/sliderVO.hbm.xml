@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.sliderVO" table="slider_dtl">
+
+		<id name="sliderId" type="int" column="sliderId">
+			<generator class="increment" />
+		</id>
+
+		<property name="sliderDescription" >
+			<column name="sliderDescription" />
+		</property>
+		<property name="price" >
+			<column name="price" />
+		</property>
+		<property name="sliderImgName" >
+			<column name="sliderImgName" />
+		</property>
+		<many-to-one name="propertyId" column="propertyId" class="VO.propertyVO"  />   		     
+		
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.stateVO" table="ad_state_dtl">
+
+		<id name="stateId" type="int" column="State_ID">
+			<generator class="increment" />
+		</id>
+
+		<property name="stateName" >
+			<column name="State_Name" />
+		</property>
+
+		<property name="stateDescription">
+			<column name="stateDescription"/>
+		</property>
+ 		
+        <many-to-one name="countryId" column="Country_Id" class="VO.countryVO"  />   		     
+		
+	</class>
+
+</hibernate-mapping>
